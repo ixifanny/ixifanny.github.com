@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://ixifanny.github.io/sitemap.xml 
