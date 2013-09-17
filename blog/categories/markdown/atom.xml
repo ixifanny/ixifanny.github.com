@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[ixifanny]]></title>
-  <link href="http://ixifanny.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Markdown | ixifanny]]></title>
+  <link href="http://ixifanny.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://ixifanny.github.io/"/>
   <updated>2013-09-17T22:05:03+08:00</updated>
   <id>http://ixifanny.github.io/</id>
