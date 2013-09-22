@@ -3,7 +3,7 @@ layout: post
 title: "Markdown 语法"
 date: 2013-09-17 22:19
 comments: true
-categories: Markdown
+categories: tech
 ---
 
 *   [概述](#overview)
