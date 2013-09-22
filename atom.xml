@@ -4,7 +4,7 @@
   <title><![CDATA[ixifanny]]></title>
   <link href="http://ixifanny.github.io/atom.xml" rel="self"/>
   <link href="http://ixifanny.github.io/"/>
-  <updated>2013-09-22T14:07:35+08:00</updated>
+  <updated>2013-09-22T14:13:24+08:00</updated>
   <id>http://ixifanny.github.io/</id>
   <author>
     <name><![CDATA[ixifanny]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[定制Octopress]]></title>
+    <link href="http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/"/>
+    <updated>2013-09-22T14:12:00+08:00</updated>
+    <id>http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress</id>
+    <content type="html"><![CDATA[<p class='post-footer'>
+            &nbsp;原文地址：
+            <a target="_blank" href='http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/'>http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/</a><br/>
+            &nbsp;版权声明：自由转载-非商用-非衍生-保持署名|
+            <a target="_blank" href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a>
+            </p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Markdown 语法]]></title>

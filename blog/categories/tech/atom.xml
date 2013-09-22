@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tech | ixifanny]]></title>
+  <link href="http://ixifanny.github.io/blog/categories/tech/atom.xml" rel="self"/>
+  <link href="http://ixifanny.github.io/"/>
+  <updated>2013-09-22T14:13:24+08:00</updated>
+  <id>http://ixifanny.github.io/</id>
+  <author>
+    <name><![CDATA[ixifanny]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[定制Octopress]]></title>
+    <link href="http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/"/>
+    <updated>2013-09-22T14:12:00+08:00</updated>
+    <id>http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
