@@ -28,6 +28,8 @@ categories: tech
 
 * * *
 
+<!-- more -->
+
 <h2 id="overview">概述</h2>
 
 <h3 id="philosophy">宗旨</h3>
