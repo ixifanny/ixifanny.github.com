@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tech | ixifanny]]></title>
   <link href="http://ixifanny.github.io/blog/categories/tech/atom.xml" rel="self"/>
   <link href="http://ixifanny.github.io/"/>
-  <updated>2013-09-23T08:59:27+08:00</updated>
+  <updated>2013-09-23T19:58:59+08:00</updated>
   <id>http://ixifanny.github.io/</id>
   <author>
     <name><![CDATA[ixifanny]]></name>
@@ -18,8 +18,112 @@
     <link href="http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/"/>
     <updated>2013-09-22T14:12:00+08:00</updated>
     <id>http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress</id>
-    <content type="html"><![CDATA[<!-- more -->
+    <content type="html"><![CDATA[<h2>引子</h2>
 
+<p>今天重新设置了一下我的Blog，主要是参考其他Ocotpress以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多Blog以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写Blog地址。所以呢，可能的话，还是多读一读、写一写。所以呢，今天就把我的Configure记录下来。</p>
+
+<!-- more -->
+
+
+<h2>安装主题</h2>
+
+<p>自带的主题其实还是不错的，但是太大众化了，太是需要有点个性。</p>
+
+<p>我使用主题的是「<a href="https://github.com/gehaxelt/CSS-WhiteLake">whitelake</a>」。</p>
+
+<p>安装的过程也很简单：</p>
+
+<p><code>
+$ cd octopress
+$ git clone https://github.com/gehaxelt/CSS-WhiteLake.git .themes/whitelake
+$ rake install['whitelake']
+$ rake generate
+</code></p>
+
+<p>之后的话，执行<code>rake deploy</code>部署一下就可以了。</p>
+
+<p>更多第三方插件和主题等资源的话，参见<a href="https://github.com/imathis/octopress/wiki">wiki</a>。</p>
+
+<h2>添加评论和分享功能</h2>
+
+<p>这里的话其实我是直接使用octopress内置的disqus评论功能以及twtter和facebook的分享功能的，这在国内可能比较稀缺，但是这设置起来简单多了，二者这些都比国内的复制品好多了。</p>
+
+<p>设置的应该不用说明，有帐号的话，直接在<code>_config.yml</code>添加并打开就可以了。</p>
+
+<h2>让博客中的链接在新窗口打开</h2>
+
+<p>其实很简单，在<code>a</code>标签里面添加<code>target="_black"</code>属性就可以实现。但是Markdown本身不支持，我们又不可能去修改HTML文件。</p>
+
+<p>可以参考：「<a href="http://www.blogjava.net/lishunli/archive/2013/01/20/394478.html">在Octopress中为markdown的超链接加上target=&ldquo;_blank&rdquo;</a>」。只需要在<code>/source/_includes/custom/head.html</code>文件末尾添加如下脚本即可:
+``` javascript</p>
+
+<script type="text/javascript">
+
+function addBlankTargetForLinks () {
+  $('a[href^="http"]').each(function(){
+      $(this).attr('target', '_blank');
+  });
+}
+
+$(document).bind('DOMNodeInserted', function(event) {
+  addBlankTargetForLinks();
+});
+
+</script>
+
+
+<p>```</p>
+
+<h2>404 公益页面</h2>
+
+<p>在<code>/source</code>目录下添加<code>404.markdown</code>即可。本博客使用的是腾讯的公益404，推荐大家使用，为社会贡献一份力量。</p>
+
+<p>```</p>
+
+<hr />
+
+<p>layout: page</p>
+
+<p>title: &ldquo;404 Error&rdquo;</p>
+
+<p>date: 2013-4-21 02:35</p>
+
+<p>comments: false</p>
+
+<p>sharing: false</p>
+
+<p>footer: false</p>
+
+<hr />
+
+<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
+
+
+<p>```</p>
+
+<h2>在博文末尾添加原文链接、版权</h2>
+
+<p>详情参见博客：「<a href="http://codemacro.com/2012/07/26/post-footer-plugin-for-octopress/">为octopress每篇文章添加一个文章信息</a>」。</p>
+
+<p>文中没有提及的是，为了做好美化，还需要增加一段针这块区域的css：</p>
+
+<p>编辑<code>sass/custom/_style.scss</code>，在末尾增加如下内容：</p>
+
+<p><code>css
+.post-footer{margin-top:10px;padding:5px;background:none repeat scroll 0pt 0pt #eee;font-size:90%;color:gray}
+</code></p>
+
+<p>这样，原文链接和版权信息就能很好的和正文内容分离开了。</p>
+
+<h2>给中英文之间加空格</h2>
+
+<p>参见博文：「<a href="http://xoyo.name/2012/04/auto-spacing-for-octopress/">给中英文间加个空格</a>」。</p>
+
+<p>特别注意ruby文件的编码：复制博文中的代码时，需要去掉前几行的描述性注释，让<code>#encoding:UTF-8</code>语句暴露在.rb文件的第一句。否则，<code>rake generate</code>时，会报错无法识别<code>\p{Han}</code>。</p>
+
+<h2>Tips</h2>
+
+<p>既然是个博客站点，就算是web产品啦，可以考虑下SEO。推荐博文：「<a href="http://codemacro.com/2012/09/06/octopress-seo/">《Octopress中的SEO》</a>」。</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="ixifanny">
 
   
-  <meta name="description" content="">
+  <meta name="description" content="引子 今天重新设置了一下我的 Blog，主要是参考其他 Ocotpress 以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多 Blog 以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -28,6 +28,28 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- Open Links in New Window -->
+<script type="text/javascript">
+
+function addBlankTargetForLinks () {
+
+  $('a[href^="http"]').each(function(){
+
+      $(this).attr('target', '_blank');
+
+  });
+
+}
+
+$(document).bind('DOMNodeInserted', function(event) {
+
+  addBlankTargetForLinks();
+
+});
+
+</script>
+
 
   
   <script type="text/javascript">
@@ -112,7 +134,11 @@
   </header>
 
 
-  <div class="entry-content"></div>
+  <div class="entry-content"><h2>引子</h2>
+
+<p>今天重新设置了一下我的 Blog，主要是参考其他 Ocotpress 以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多 Blog 以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写 Blog 地址。所以呢，可能的话，还是多读一读、写一写。所以呢，今天就把我的 Configure 记录下来。</p>
+
+</div>
   
   
     <footer>

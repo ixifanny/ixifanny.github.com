@@ -9,7 +9,7 @@
   <meta name="author" content="ixifanny">
 
   
-  <meta name="description" content=" &nbsp;原文地址： http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/ &nbsp;版权声明：自由转载-非商用-非衍生-保持署名| Creative Commons BY-NC-ND 3.0 ">
+  <meta name="description" content="引子 今天重新设置了一下我的 Blog，主要是参考其他 Ocotpress 以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多 Blog 以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -28,6 +28,28 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- Open Links in New Window -->
+<script type="text/javascript">
+
+function addBlankTargetForLinks () {
+
+  $('a[href^="http"]').each(function(){
+
+      $(this).attr('target', '_blank');
+
+  });
+
+}
+
+$(document).bind('DOMNodeInserted', function(event) {
+
+  addBlankTargetForLinks();
+
+});
+
+</script>
+
 
   
   <script type="text/javascript">
@@ -109,8 +131,141 @@
   </header>
 
 
-<div class="entry-content"><!-- more -->
+<div class="entry-content"><h2>引子</h2>
 
+<p>今天重新设置了一下我的 Blog，主要是参考其他 Ocotpress 以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多 Blog 以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写 Blog 地址。所以呢，可能的话，还是多读一读、写一写。所以呢，今天就把我的 Configure 记录下来。</p>
+
+<!-- more -->
+
+
+<h2>安装主题</h2>
+
+<p>自带的主题其实还是不错的，但是太大众化了，太是需要有点个性。</p>
+
+<p>我使用主题的是「<a href="https://github.com/gehaxelt/CSS-WhiteLake">whitelake</a>」。</p>
+
+<p>安装的过程也很简单：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd octopress
+</span><span class='line'>$ git clone https://github.com/gehaxelt/CSS-WhiteLake.git .themes/whitelake
+</span><span class='line'>$ rake install['whitelake']
+</span><span class='line'>$ rake generate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>之后的话，执行<code>rake deploy</code>部署一下就可以了。</p>
+
+<p>更多第三方插件和主题等资源的话，参见 <a href="https://github.com/imathis/octopress/wiki">wiki</a>。</p>
+
+<h2>添加评论和分享功能</h2>
+
+<p>这里的话其实我是直接使用 octopress 内置的 disqus 评论功能以及 twtter 和 facebook 的分享功能的，这在国内可能比较稀缺，但是这设置起来简单多了，二者这些都比国内的复制品好多了。</p>
+
+<p>设置的应该不用说明，有帐号的话，直接在<code>_config.yml</code>添加并打开就可以了。</p>
+
+<h2>让博客中的链接在新窗口打开</h2>
+
+<p>其实很简单，在<code>a</code>标签里面添加<code>target="_black"</code>属性就可以实现。但是 Markdown 本身不支持，我们又不可能去修改 HTML 文件。</p>
+
+<p>可以参考：「<a href="http://www.blogjava.net/lishunli/archive/2013/01/20/394478.html">在 Octopress 中为 markdown 的超链接加上 target=&ldquo;_blank&rdquo;</a>」。只需要在<code>/source/_includes/custom/head.html</code>文件末尾添加如下脚本即可:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">addBlankTargetForLinks</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;a[href^=&quot;http&quot;]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;_blank&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;DOMNodeInserted&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">addBlankTargetForLinks</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>404 公益页面</h2>
+
+<p>在<code>/source</code>目录下添加<code>404.markdown</code>即可。本博客使用的是腾讯的公益 404，推荐大家使用，为社会贡献一份力量。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">---</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">layout</span><span class="o">:</span> <span class="nx">page</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;404 Error&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">date</span><span class="o">:</span> <span class="mi">2013</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">21</span> <span class="mi">02</span><span class="o">:</span><span class="mi">35</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">comments</span><span class="o">:</span> <span class="kc">false</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">sharing</span><span class="o">:</span> <span class="kc">false</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">footer</span><span class="o">:</span> <span class="kc">false</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">---</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://www.qq.com/404/search_children.js&quot;</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>在博文末尾添加原文链接、版权</h2>
+
+<p>详情参见博客：「<a href="http://codemacro.com/2012/07/26/post-footer-plugin-for-octopress/">为 octopress 每篇文章添加一个文章信息</a>」。</p>
+
+<p>文中没有提及的是，为了做好美化，还需要增加一段针这块区域的 css：</p>
+
+<p>编辑<code>sass/custom/_style.scss</code>，在末尾增加如下内容：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.post-footer</span><span class="p">{</span><span class="k">margin-top</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span><span class="k">padding</span><span class="o">:</span><span class="m">5px</span><span class="p">;</span><span class="k">background</span><span class="o">:</span><span class="k">none</span> <span class="k">repeat</span> <span class="k">scroll</span> <span class="m">0pt</span> <span class="m">0pt</span> <span class="m">#eee</span><span class="p">;</span><span class="k">font-size</span><span class="o">:</span><span class="m">90</span><span class="o">%</span><span class="p">;</span><span class="k">color</span><span class="o">:</span><span class="nb">gray</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这样，原文链接和版权信息就能很好的和正文内容分离开了。</p>
+
+<h2>给中英文之间加空格</h2>
+
+<p>参见博文：「<a href="http://xoyo.name/2012/04/auto-spacing-for-octopress/">给中英文间加个空格</a>」。</p>
+
+<p>特别注意 ruby 文件的编码：复制博文中的代码时，需要去掉前几行的描述性注释，让<code>#encoding:UTF-8</code>语句暴露在.rb 文件的第一句。否则，<code>rake generate</code>时，会报错无法识别<code>\p{Han}</code>。</p>
+
+<h2>Tips</h2>
+
+<p>既然是个博客站点，就算是 web 产品啦，可以考虑下 SEO。推荐博文：「<a href="http://codemacro.com/2012/09/06/octopress-seo/">《Octopress 中的 SEO》</a>」。</p>
 
 <p class='post-footer'>
             &nbsp;原文地址：
