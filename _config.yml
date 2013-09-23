@@ -73,7 +73,7 @@ twitter_user: ixifanny
 twitter_tweet_button: true
 
 # Google +1
-google_plus_one: false
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -86,15 +86,15 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:
+delicious_user: ixifanny
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: ixifanny
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-44233862-1
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
