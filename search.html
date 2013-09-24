@@ -6,7 +6,7 @@
 	<title>ixifanny</title>
     <meta name="author" content="ixifanny">
     
-	<meta name="description" content="Published on: Sep 22nd, 2013 Tags: tech 引子 今天重新设置了一下我的Blog，主要是参考其他Octopress以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多Blog以及微信公众帐号的文章，感觉作为一枚程序员， &hellip;">
+	<meta name="description" content="Search Results $('#search_results').tapir({ 'token': '', 'complete' : function() { document.getElementById('search_loading').style.display="none &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -109,140 +109,22 @@
 <div id="toload">
 <!-- begin toload --> 
     <div id="content" class="inner">
-        
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/09/22/ding-zhi-octopress/">
-		
-			定制Octopress</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-22T14:12:00+08:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-
-	<a class='category' href='/blog/categories/tech/'>tech</a>
-
-
+        <h1 class="entry-title"><center>Search Results</center></h1>
+<div id="search_loading" style="margin: 40px 0">
+    <center><img src="/images/loading.gif"></center>
 </div>
-    </div>
-		<h2>引子</h2>
 
-<p>今天重新设置了一下我的Blog，主要是参考其他Octopress以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多Blog以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写Blog地址。所以呢，可能的话，还是多读一读、写一写。所以呢，今天就把我的Configure记录下来。</p>
-
-
-		
-		<a href="/blog/2013/09/22/ding-zhi-octopress/" class="more-link">Read on &rarr;</a>
-	</div>
-
-<div class="meta">
-	
+<script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
+<div id="search_results" style="display:none">
+<br>
 </div>
-</article>
+<script>
+         $('#search_results').tapir({
+             'token': '',
+             'complete' : function() { document.getElementById('search_loading').style.display="none"; }
+         });
+</script>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/09/17/markdown-yu-fa/">
-		
-			Markdown 语法</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-17T22:19:00+08:00" pubdate data-updated="true">Sep 17<span>th</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-
-	<a class='category' href='/blog/categories/tech/'>tech</a>
-
-
-</div>
-    </div>
-		<ul>
-<li><a href="#overview">概述</a>
-
-<ul>
-<li><a href="#philosophy">宗旨</a></li>
-<li><a href="#html">兼容 HTML</a></li>
-<li><a href="#autoescape">特殊字符自动转换</a></li>
-</ul>
-</li>
-<li><a href="#block">区块元素</a>
-
-<ul>
-<li><a href="#p">段落和换行</a></li>
-<li><a href="#header">标题</a></li>
-<li><a href="#blockquote">区块引用</a></li>
-<li><a href="#list">列表</a></li>
-<li><a href="#precode">代码区块</a></li>
-<li><a href="#hr">分隔线</a></li>
-</ul>
-</li>
-<li><a href="#span">区段元素</a>
-
-<ul>
-<li><a href="#link">链接</a></li>
-<li><a href="#em">强调</a></li>
-<li><a href="#code">代码</a></li>
-<li><a href="#img">图片</a></li>
-</ul>
-</li>
-<li><a href="#misc">其它</a>
-
-<ul>
-<li><a href="#autolink">自动链接</a></li>
-<li><a href="#backslash">反斜杠</a></li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-
-		
-		<a href="/blog/2013/09/17/markdown-yu-fa/" class="more-link">Read on &rarr;</a>
-	</div>
-
-<div class="meta">
-	
-</div>
-</article>
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav>
 
     </div>
     <footer id="footer">

@@ -1,139 +1,119 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>定制Octopress - ixifanny</title>
-  <meta name="author" content="ixifanny">
+	<meta charset="utf-8">
+	<title>定制Octopress - ixifanny</title>
+    <meta name="author" content="ixifanny">
+    
+	<meta name="description" content="引子 今天重新设置了一下我的Blog，主要是参考其他Octopress以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多Blog以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写Blog地址。 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
-  <meta name="description" content="引子 今天重新设置了一下我的 Blog，主要是参考其他 Ocotpress 以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多 Blog 以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写 &hellip;">
-  
+	<link href="/atom.xml" rel="alternate" title="ixifanny" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.ico" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-  
-  <link rel="canonical" href="http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="ixifanny" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
 
-<!-- Open Links in New Window -->
-<script type="text/javascript">
+    <!-- remove or comment it to disable ajaxification -->   
+    <script src="/javascripts/ajaxify.js"></script>
+   
+    
+    
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-44233862-1']);
+		_gaq.push(['_trackPageview']);
 
-function addBlankTargetForLinks () {
-
-  $('a[href^="http"]').each(function(){
-
-      $(this).attr('target', '_blank');
-
-  });
-
-}
-
-$(document).bind('DOMNodeInserted', function(event) {
-
-  addBlankTargetForLinks();
-
-});
-
-</script>
-
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-44233862-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">ixifanny</a></h1>
+
+<body>
+    <div id="wrapper">
+    <header id="header" class="inner"><!-- for more effects see _animate.scss -->
+<h1 class="animated bounceInDown">
+    <div id="headerbg">
+        ixifanny
+    </div>
+</h1>
+<br>
+
+<ul id="social-links" style="text-align:center">
   
-    <h2>博学之，审问之，慎思之，明辨之，笃行之。</h2>
+  <!-- GitHub -->
+  <li>
+  <a href="https://github.com/ixifanny" class="github" title="Github"></a>
+  </li>
   
-</hgroup>
+  
+  <!-- Google Plus -->
+  <li>
+  <a href="http://plus.google.com/109160999575555036829?rel=author" class="google" title="Google+"></a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li>
+  <a href="http://www.twitter.com/ixifanny" class="twitter" title="Twitter"></a>
+  </li>
+  
+  
+  
+  
+  
+</ul>
+
+
+<!-- use full url including 'index.html' for navigation bar if you are using ajax -->
+<ul id="nav">
+	<li id="ajax"><a href="/index.html">Home</a></li>
+<!--	<li id="ajax"><a href="/blog/archives/index.html">Archivesz</a></li> -->
+    <li id="ajax"><a href="/blog/categories/tech/">技术</a></li>
+    <li id="ajax"><a href="/blog/categories/life/">生活</a></li>
+    <li id="ajax"><a href="/blog/categories/book/">读书</a></li>
+    <li id="ajax"><a href="/about/">关于</a></li>
+    <li><a href="/atom.xml">RSS</a></li>
+    
+    <li>
+    <div id="dark">
+        <form method="get" action="/search.html" id="search">
+            <input name="query" type="text" placeholder="Search..." x-webkit-speech />
+        </form>
+    </div>
+    </li>
+        
+</ul>
+
+
+
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:ixifanny.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-<!--
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
--->
-  <li><a href="/">首页</a></li>
-  <li><a href="/blog/categories/tech/">技术</a></li>
-  <li><a href="/blog/categories/life/">生活</a></li>
-  <li><a href="/blog/categories/book/">读书</a></li>
-  <li><a href="/about">关于</a></li>
-</ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
-    
-      <h1 class="entry-title">定制Octopress</h1>
-    
-    
-      <p class="meta">
-        
+<div id="toload">
+<!-- begin toload --> 
+    <div id="content" class="inner">
+        <article class="post">
+	<h2 class="title">定制Octopress</h2>
+	<div class="entry-content"><h2>引子</h2>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-22T14:12:00+08:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><h2>引子</h2>
-
-<p>今天重新设置了一下我的 Blog，主要是参考其他 Ocotpress 以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多 Blog 以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写 Blog 地址。所以呢，可能的话，还是多读一读、写一写。所以呢，今天就把我的 Configure 记录下来。</p>
+<p>今天重新设置了一下我的Blog，主要是参考其他Octopress以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多Blog以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写Blog地址。所以呢，可能的话，还是多读一读、写一写。所以呢，今天就把我的Configure记录下来。</p>
 
 <!-- more -->
 
@@ -158,19 +138,19 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <p>之后的话，执行<code>rake deploy</code>部署一下就可以了。</p>
 
-<p>更多第三方插件和主题等资源的话，参见 <a href="https://github.com/imathis/octopress/wiki">wiki</a>。</p>
+<p>更多第三方插件和主题等资源的话，参见<a href="https://github.com/imathis/octopress/wiki">wiki</a>。</p>
 
 <h2>添加评论和分享功能</h2>
 
-<p>这里的话其实我是直接使用 octopress 内置的 disqus 评论功能以及 twtter 和 facebook 的分享功能的，这在国内可能比较稀缺，但是这设置起来简单多了，二者这些都比国内的复制品好多了。</p>
+<p>这里的话其实我是直接使用octopress内置的disqus评论功能以及twtter和facebook的分享功能的，这在国内可能比较稀缺，但是这设置起来简单多了，二者这些都比国内的复制品好多了。</p>
 
 <p>设置的应该不用说明，有帐号的话，直接在<code>_config.yml</code>添加并打开就可以了。</p>
 
 <h2>让博客中的链接在新窗口打开</h2>
 
-<p>其实很简单，在<code>a</code>标签里面添加<code>target="_black"</code>属性就可以实现。但是 Markdown 本身不支持，我们又不可能去修改 HTML 文件。</p>
+<p>其实很简单，在<code>a</code>标签里面添加<code>target="_black"</code>属性就可以实现。但是Markdown本身不支持，我们又不可能去修改HTML文件。</p>
 
-<p>可以参考：「<a href="http://www.blogjava.net/lishunli/archive/2013/01/20/394478.html">在 Octopress 中为 markdown 的超链接加上 target=&ldquo;_blank&rdquo;</a>」。只需要在<code>/source/_includes/custom/head.html</code>文件末尾添加如下脚本即可:</p>
+<p>可以参考：「<a href="http://www.blogjava.net/lishunli/archive/2013/01/20/394478.html">在Octopress中为markdown的超链接加上target=&ldquo;_blank&rdquo;</a>」。只需要在<code>/source/_includes/custom/head.html</code>文件末尾添加如下脚本即可:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -203,7 +183,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <h2>404 公益页面</h2>
 
-<p>在<code>/source</code>目录下添加<code>404.markdown</code>即可。本博客使用的是腾讯的公益 404，推荐大家使用，为社会贡献一份力量。</p>
+<p>在<code>/source</code>目录下添加<code>404.markdown</code>即可。本博客使用的是腾讯的公益404，推荐大家使用，为社会贡献一份力量。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -244,9 +224,9 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <h2>在博文末尾添加原文链接、版权</h2>
 
-<p>详情参见博客：「<a href="http://codemacro.com/2012/07/26/post-footer-plugin-for-octopress/">为 octopress 每篇文章添加一个文章信息</a>」。</p>
+<p>详情参见博客：「<a href="http://codemacro.com/2012/07/26/post-footer-plugin-for-octopress/">为octopress每篇文章添加一个文章信息</a>」。</p>
 
-<p>文中没有提及的是，为了做好美化，还需要增加一段针这块区域的 css：</p>
+<p>文中没有提及的是，为了做好美化，还需要增加一段针这块区域的css：</p>
 
 <p>编辑<code>sass/custom/_style.scss</code>，在末尾增加如下内容：</p>
 
@@ -261,164 +241,56 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <p>参见博文：「<a href="http://xoyo.name/2012/04/auto-spacing-for-octopress/">给中英文间加个空格</a>」。</p>
 
-<p>特别注意 ruby 文件的编码：复制博文中的代码时，需要去掉前几行的描述性注释，让<code>#encoding:UTF-8</code>语句暴露在.rb 文件的第一句。否则，<code>rake generate</code>时，会报错无法识别<code>\p{Han}</code>。</p>
+<p>注意ruby文件的编码：复制博文中的代码时，需要去掉前面注释，让<code>#encoding:UTF-8</code>语句暴露在.rb文件的第一句。否则，<code>rake generate</code>时，会报错无法识别<code>\p{Han}</code>。</p>
 
 <h2>Tips</h2>
 
-<p>既然是个博客站点，就算是 web 产品啦，可以考虑下 SEO。推荐博文：「<a href="http://codemacro.com/2012/09/06/octopress-seo/">《Octopress 中的 SEO》</a>」。</p>
-
-<p class='post-footer'>
-            &nbsp;原文地址：
-            <a target="_blank" href='http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/'>http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/</a><br/>
-            &nbsp;版权声明：自由转载-非商用-非衍生-保持署名|
-            <a target="_blank" href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a>
-            </p>
-
+<p>既然是个博客站点，就算是web产品啦，可以考虑下SEO。推荐博文：「<a href="http://codemacro.com/2012/09/06/octopress-seo/">《Octopress中的SEO》</a>」。</p>
 </div>
 
-
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">ixifanny</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-22T14:12:00+08:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/tech/'>tech</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/" data-via="ixifanny" data-counturl="http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress/" >Tweet</a>
-  
-  
-  <div class="g-plusone" data-size="medium"></div>
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
+<div class="meta">
+	
 </div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/09/17/markdown-yu-fa/" title="Previous Post: Markdown 语法">&laquo; Markdown 语法</a>
-      
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
-
-</div>
-
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/09/22/ding-zhi-octopress/">定制Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/17/markdown-yu-fa/">Markdown 语法</a>
-      </li>
-    
-  </ul>
 </section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/ixifanny">@ixifanny</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'ixifanny',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>On Delicious</h1>
-  <div id="delicious"></div>
-  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/ixifanny?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
-  <p><a href="http://delicious.com/ixifanny">My Delicious Bookmarks &raquo;</a></p>
-</section>
-
-
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/109160999575555036829?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
-  
-</aside>
-
 
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - ixifanny -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-  - <span class="credit">Theme by <a href="http://www.gehaxelt.in">Gehaxelt</a></span>
-  <span class="credit">and <a href="http://www.it-solutions-neef.de">IT Solutions Neef</a></span>
-</p>
+    <footer id="footer">
+    <div style="display:inline">
+    Copyright &copy; 2013
 
-</footer>
-  
+    ixifanny
+. Powered by <a href="http://octopress.org">Octopress</a> | 
+    Theme <a href="http://github.com/panks/fabric">fabric</a> by <a href="http://panks.me">Pankaj Kumar</a>
+</div>
+
+
+    </footer>
+    <script src="/javascripts/fabric.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
 
 <script type="text/javascript">
       var disqus_shortname = 'ixifanny';
@@ -438,40 +310,16 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
+<!-- end toload --> 
+</div>
+</div>
+<script src="/javascripts/jquery.ui.totop.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+;(function($){$().UItoTop({easingType:'easeOutCirc'});})(jQuery); 
+/*]]>*/
+</script><!-- remove it to remove the scroll to top button -->
 </body>
 </html>

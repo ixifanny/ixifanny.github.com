@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tech | ixifanny]]></title>
   <link href="http://ixifanny.github.io/blog/categories/tech/atom.xml" rel="self"/>
   <link href="http://ixifanny.github.io/"/>
-  <updated>2013-09-24T11:11:42+08:00</updated>
+  <updated>2013-09-24T12:25:08+08:00</updated>
   <id>http://ixifanny.github.io/</id>
   <author>
     <name><![CDATA[ixifanny]]></name>
@@ -20,7 +20,7 @@
     <id>http://ixifanny.github.io/blog/2013/09/22/ding-zhi-octopress</id>
     <content type="html"><![CDATA[<h2>引子</h2>
 
-<p>今天重新设置了一下我的Blog，主要是参考其他Ocotpress以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多Blog以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写Blog地址。所以呢，可能的话，还是多读一读、写一写。所以呢，今天就把我的Configure记录下来。</p>
+<p>今天重新设置了一下我的Blog，主要是参考其他Octopress以及官方文档，现在看起来还是比较漂亮。其实自从高考之后，几乎就没写过什么文章，但是最近看了很多Blog以及微信公众帐号的文章，感觉作为一枚程序员，语言表达能力对于职业生涯是至关重要的，比如说招聘时都可能让你填写Blog地址。所以呢，可能的话，还是多读一读、写一写。所以呢，今天就把我的Configure记录下来。</p>
 
 <!-- more -->
 
@@ -119,7 +119,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <p>参见博文：「<a href="http://xoyo.name/2012/04/auto-spacing-for-octopress/">给中英文间加个空格</a>」。</p>
 
-<p>特别注意ruby文件的编码：复制博文中的代码时，需要去掉前几行的描述性注释，让<code>#encoding:UTF-8</code>语句暴露在.rb文件的第一句。否则，<code>rake generate</code>时，会报错无法识别<code>\p{Han}</code>。</p>
+<p>注意ruby文件的编码：复制博文中的代码时，需要去掉前面注释，让<code>#encoding:UTF-8</code>语句暴露在.rb文件的第一句。否则，<code>rake generate</code>时，会报错无法识别<code>\p{Han}</code>。</p>
 
 <h2>Tips</h2>
 
