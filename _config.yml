@@ -99,3 +99,5 @@ google_analytics_tracking_id: UA-44233862-1
 # Facebook Like
 facebook_like: false
 
+# Tapir Search
+tapir_token: 52411cf270c7430200000003
