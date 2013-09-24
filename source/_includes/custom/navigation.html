@@ -1,11 +1,19 @@
-<ul class="main-navigation">
-<!--
-  <li><a href="{{ root_url }}/">Blog</a></li>
-  <li><a href="{{ root_url }}/blog/archives">Archives</a></li>
--->
-  <li><a href="{{ root_url }}/">首页</a></li>
-  <li><a href="{{ root_url }}/blog/categories/tech/">技术</a></li>
-  <li><a href="{{ root_url }}/blog/categories/life/">生活</a></li>
-  <li><a href="{{ root_url }}/blog/categories/book/">读书</a></li>
-  <li><a href="{{ root_url }}/about">关于</a></li>
+<!-- use full url including 'index.html' for navigation bar if you are using ajax -->
+<ul id="nav">
+	<li id="ajax"><a href="{{ root_url }}/index.html">Home</a></li>
+<!--	<li id="ajax"><a href="{{ root_url }}/blog/archives/index.html">Archivesz</a></li> -->
+    <li id="ajax"><a href="{{ root_url }}/blog/categories/tech/">技术</a></li>
+    <li id="ajax"><a href="{{ root_url }}/blog/categories/life/">生活</a></li>
+    <li id="ajax"><a href="{{ root_url }}/blog/categories/book/">读书</a></li>
+    <li id="ajax"><a href="{{ root_url }}/about/">关于</a></li>
+    <li><a href="{{ root_url }}/atom.xml">RSS</a></li>
+    {% if site.simple_search %}
+    <li>
+    <div id="dark">
+        <form method="get" action="{{ root_url }}/search.html" id="search">
+            <input name="query" type="text" placeholder="Search..." x-webkit-speech />
+        </form>
+    </div>
+    </li>
+    {% endif %}    
 </ul>
